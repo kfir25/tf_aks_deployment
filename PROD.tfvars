@@ -1,0 +1,12 @@
+customer = "commit"
+project  = "kfir"
+location = "westeurope"
+location_short = "euw"
+env      = "prod"
+name_serial = "99"
+address_space_prefix       = "10.10"
+address_space_after_prefix = "0"
+address_space_before_sufix = "0"
+address_space_sufix        = "/21"
+address_space_subnet_sufix = "/24"
+tags={}
