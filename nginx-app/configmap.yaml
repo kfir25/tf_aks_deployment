@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-index
+data:
+  index.html: |
+    <html>
+      <body>
+        <h1>Welcome to Azure AKS!</h1>
+      </body>
+    </html>
