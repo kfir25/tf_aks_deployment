@@ -1,0 +1,18 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: nginx-high-cpu
+  namespace: monitoring
+spec:
+  groups:
+    - name: nginx.rules
+      rules:
+        - alert: NginxHighCPU
+          expr: |
+            sum(rate(container_cpu_usage_seconds_total{pod=~"nginx.*"}[2m])) > 0.8
+          for: 1m
+          labels:
+            severity: warning
+          annotations:
+            summary: "High CPU usage on Nginx pod"
+            description: "Nginx pod CPU usage is above 80% for more than 1 minute."
