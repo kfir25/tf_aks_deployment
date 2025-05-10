@@ -115,6 +115,7 @@ This project demonstrates how to deploy an Nginx application on Azure Kubernetes
 1. **Add Prometheus Helm Repository**:  
    `helm repo add prometheus-community https://prometheus-community.github.io/helm-charts`  
    `helm repo update`
+   
    optionally pull the repository of the chart: helm pull prometheus-community/kube-prometheus-stack --untar
 
 2. **Install Prometheus and Alertmanager**:  
