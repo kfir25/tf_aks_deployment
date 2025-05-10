@@ -10,3 +10,6 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
+    - protocol: TCP
+      port: 9113  # Port for Nginx Prometheus exporter
+      targetPort: 9113  # Same port as the Prometheus exporter container exposes
