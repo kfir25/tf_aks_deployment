@@ -52,8 +52,8 @@ create_rg_app = true
   system_pool_node_count ="1" 
   kubernetes_version = null
 
-  private_cluster_enabled =true
-  system_pool_zones = ["1"] 
+  private_cluster_enabled =false
+  system_pool_zones = null #["1","2"] 
   system_pool_enable_auto_scaling = true
   system_pool_min_count = "1"
   system_pool_max_count = "2"
@@ -62,7 +62,7 @@ create_rg_app = true
 
   create_apppool  = true
   apppool_vm_size  = "Standard_B2s"
-  apppool_zones  =  ["1"]
+  apppool_zones  =  null # ["1","2"] 
   apppool_enable_auto_scaling  =  true
   apppool_node_count  = "1"
   apppool_min_count  =  "1"
